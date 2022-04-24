@@ -1,0 +1,12 @@
+--by: dcdave
+--YT https://www.youtube.com/channel/UCs2Shn0_s8OClKyEu0l6tew
+--put this script in your first teleporter object ex. door, pad
+script.Parent.Touched:Connect(function(hit)
+	local hum = hit.Parent:WaitForChild('HumanoidRootPart')
+
+	if hum then
+		hum.Position = script.Parent.Parent:FindFirstChild('Teleporter1').Position -- change Teleporter1 to your name of your teleporter pad/door.
+		wait(5) -- feel free to change this number as needed. This is the time between each teleport.
+	end
+end)
+
